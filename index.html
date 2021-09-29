@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <style>
+        /* open-sans-regular - latin - modern browsers  */
+        
+        @font-face {
+            font-family: 'Neue Einstellung';
+            font-style: normal;
+            font-weight: normal;
+            src: url('fonts/NeueEinstellung-Regular.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-family: 'Neue Einstellung';
+            font-style: normal;
+            font-weight: bold;
+            src: url('fonts/NeueEinstellung-Bold.woff2') format('woff2');
+        }
+        
+        .flex-even {
+            flex: 1;
+        }
+        
+        .b-grey {
+            background-color: #f6f6f6;
+        }
+        
+        .potrait-holder {
+            /* width: 450px;
+        height: 390px; */
+            height: 309.78px;
+            width: 327.78px;
+            position: relative;
+        }
+        
+        .potrait-holder img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .bg-gray-1 {
+            background-color: #f6f6f6;
+        }
+        
+        .frame-images img {
+            width: 64px;
+            width: 64px;
+            margin: 2px;
+        }
+        
+        .frame-images img.active {
+            border: 2px inset #000;
+        }
+        
+        .mat-colors ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .mat-colors li {
+            margin: 0;
+            display: inline-block;
+            flex: 0 0 12%;
+        }
+        
+        .mat-colors label {
+            cursor: pointer;
+        }
+        
+        .mat-colors input {
+            display: none;
+        }
+        
+        .mat-colors input[type="radio"]:checked+.swatch {
+            box-shadow: inset 0 0 0 2px #ddd;
+        }
+        
+        .swatch {
+            display: inline-block;
+            vertical-align: middle;
+            height: 16px;
+            width: 16px;
+            margin: 0 5px 0 0;
+            border: 1px solid #d4d4d4;
+        }
+        
+        .mat-super-white {
+            background-color: #fdf9f6;
+        }
+        
+        .mat-soft-white {
+            background-color: #fbf3ea;
+        }
+        
+        .mat-cloud {
+            background-color: #fbf7ee;
+        }
+        
+        .mat-antique-white {
+            background-color: #ffecdd;
+        }
+        
+        .mat-btige {
+            background-color: #efddc5;
+        }
+        
+        .mat-amethyst {
+            background-color: #674e6c;
+        }
+        
+        .mat-midnight-blue {
+            background-color: #242b3e;
+        }
+        
+        .mat-ink {
+            background-color: #0062a6;
+        }
+        
+        .mat-buttercup {
+            background-color: #f7ca61;
+        }
+        
+        .mat-pure-gray {
+            background-color: #9a9b9f;
+        }
+        
+        .mat-smooth-black {
+            background-color: #10150f;
+        }
+        
+        .mat-smooth-granite {
+            background-color: #736c73;
+        }
+        
+        .mat-monastery {
+            background-color: #f68122;
+        }
+        
+        .mat-aqua-blue {
+            background-color: #c2f6fa;
+        }
+        
+        .mat-deep-red {
+            background-color: #ad2b43;
+        }
+        
+        .mat-cardinal {
+            background-color: #a13239;
+        }
+        
+        .mat-bittersweet {
+            background-color: #cc4d3e;
+        }
+        
+        .mat-soft-pink {
+            background-color: #f9cdcc;
+        }
+        
+        .mat-forest-shadow {
+            background-color: #375f55;
+        }
+        
+        .mat-hunter-green {
+            background-color: #617a67;
+        }
+        
+        .mat-cappuccino {
+            background-color: #6b5345;
+        }
+        
+        .mat-umber {
+            background-color: #8a7e6e;
+        }
+        
+        .mat-metallic-gold {
+            background-color: #ba8951;
+        }
+        
+        .mat-navy-blue {
+            background-color: #001854;
+        }
+        
+        .frame-sizes {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 250px;
+            justify-content: flex-end;
+        }
+        
+        .frame-sizes li {
+            flex: 0 0 21%;
+            margin-left: 5px;
+        }
+        
+        .frame-sizes input[type='radio'] {
+            display: none;
+        }
+        
+        .frame-sizes label {
+            color: #000;
+            background-color: #f6f6f6;
+            padding: .2rem .35rem;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .frame-sizes input[type='radio']:checked+label {
+            background-color: #000;
+            color: #FFF;
+        }
+        /* .potrait-holder{
+        width: 500px;
+        height: auto;
+    } */
+        
+        .frame-detail {
+            font-family: 'Neue Einstellung';
+            font-weight: normal;
+        }
+        
+        .text-bold {
+            font-weight: bold;
+        }
+        
+        a.clear_frame,
+        a:hover.clear_frame,
+        a:focus.clear_frame {
+            font-size: 14px;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .text-light-gray {
+            color: #999;
+        }
+        
+        .image-content {
+            position: absolute;
+            left: 6.5%;
+            top: 7%;
+            width: 87%;
+            height: 85%;
+            background-image: url(images/image.jpg);
+            background-size: cover;
+            border: 9px solid #ffecdd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex wrapper">
+        <div class="flex-even flex-shrink-left b-grey  d-flex align-items-center justify-content-center">
+            <div id="potrait-holder" class="potrait-holder">
+                <img id="frame_image" src="./images/frame/frame-15.png" alt="">
+                <div id="image-content" class="image-content"></div>
+            </div>
+        </div>
+        <div class="flex-even flex-shrink-right p-5 frame-detail">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-light-gray"><small>Home &nbsp; &nbsp; / &nbsp; &nbsp; Beach</small></p>
+                </div>
+                <div class="col-md-12">
+                    <h3 class="h3 title mt-4 text-bold">
+                        French Polynesia
+                    </h3>
+                </div>
+                <div class="col-md-12">
+                    <p class="text-light-gray">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut dui nibh. Cras eleifend quam neque, et luctus libero volutpat vitae. Vestibulum ex metus
+                    </p>
+                </div>
+                <!-- <div class="small-thumnail">
+                    <div class="col-md-12">
+                    </div>
+                </div> -->
+                <div class="col-md-12 mt-4">
+                    <h2 class="h2 d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="48" viewBox="0 0 21 48">
+                            <text id="_" data-name="$" transform="translate(0 39)" fill="#0f0f0f" font-size="36" font-family="PlayfairDisplay-Bold, Playfair Display" font-weight="700"><tspan x="0" y="0">$</tspan></text>
+                        </svg>
+                        <span id="price" class="mt-2 ml-2">400</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="d-flex bg-gray-1 frame-images flex-wrap p-2">
+                <a href="#" class="frame-link"><img src="images/menu-1.jpg" data-id="1" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-2.jpg" data-id="2" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-3.jpg" data-id="3" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-4.jpg" data-id="4" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-5.jpg" data-id="5" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-6.jpg" data-id="6" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-7.jpg" data-id="7" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-8.jpg" data-id="8" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-9.jpg" data-id="9" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-10.jpg" data-id="10" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-11.jpg" data-id="11" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-12.jpg" data-id="12" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-13.jpg" data-id="13" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-14.jpg" data-id="14" alt=""></a>
+                <a href="#" class="frame-link"><img src="images/menu-15.jpg" data-id="15" class="active" alt=""></a>
+                <select style="display: none;" name="" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+            <div class="d-flex row my-4 align-items-center">
+                <div class="col-4">
+                    <div class="mat-colors">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Super white">
+                                    <span onclick="changeMatColor('#fdf9f6')" class="swatch mat-super-white"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Soft white">
+                                    <span 
+                                    onclick="changeMatColor('#fbf3ea')"  class="swatch mat-soft-white"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Cloud">
+                                    <span onclick="changeMatColor('#fbf7ee')"    class="swatch mat-cloud"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Antique White">
+                                    <span onclick="changeMatColor('#ffecdd')" class="swatch mat-antique-white"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Btige">
+                                    <span onclick="changeMatColor('#efddc5')" class="swatch mat-btige"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Amethyst">
+                                    <span onclick="changeMatColor('#674e6c')" class="swatch mat-amethyst"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Midnight Blue">
+                                    <span onclick="changeMatColor('#242b3e')" class="swatch mat-midnight-blue"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Ink">
+                                    <span onclick="changeMatColor('#0062a6')" class="swatch mat-ink"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Buttercup">
+                                    <span onclick="changeMatColor('#f7ca61')" class="swatch mat-buttercup"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Pure Gray">
+                                    <span onclick="changeMatColor('#9a9b9f')" class="swatch mat-pure-gray"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Smooth Black">
+                                    <span onclick="changeMatColor('#10150f')" class="swatch mat-smooth-black"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Granite">
+                                    <span onclick="changeMatColor('#736c73')" class="swatch mat-smooth-granite"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Monastery">
+                                    <span onclick="changeMatColor('#f68122')" class="swatch mat-monastery"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Aqua blue">
+                                    <span onclick="changeMatColor('#c2f6fa')" class="swatch mat-aqua-blue"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Deep red">
+                                    <span onclick="changeMatColor('#ad2b43')" class="swatch mat-deep-red"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Cardinal">
+                                    <span onclick="changeMatColor('#a13239')" class="swatch mat-cardinal"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Bittersweet">
+                                    <span onclick="changeMatColor('#cc4d3e')" class="swatch mat-bittersweet"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Soft pink">
+                                    <span onclick="changeMatColor('#f9cdcc')" class="swatch mat-soft-pink"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Forest Shadow">
+                                    <span onclick="changeMatColor('#375f55')" class="swatch mat-forest-shadow"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Hunter green">
+                                    <span onclick="changeMatColor('#617a67')" class="swatch mat-hunter-green"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Cappuccino">
+                                    <span onclick="changeMatColor('#6b5345')" class="swatch mat-cappuccino"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Umber">
+                                    <span onclick="changeMatColor('#8a7e6e')" class="swatch mat-umber"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Metallic gold">
+                                    <span onclick="changeMatColor('#ba8951')" class="swatch mat-metallic-gold"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="color" value="Bittersweet">
+                                    <span onclick="changeMatColor('#001854')"     class="swatch mat-navy-blue"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <h6 class="h6 mr-4">Frame size:</h6>
+                        <ul class="frame-sizes">
+                            <li>
+                                <input type="radio" name="frame_size" id="option_1">
+                                <label onclick="getFrameSize(180,180,50)" for="option_1">14x12</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="frame_size" id="option_2">
+                                <label onclick="getFrameSize(180*1.123,180*1.223 , 100)" for="option_2">20x16</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="frame_size" id="option_3">
+                                <label onclick="getFrameSize(180*1.223,180*1.321 , 150)" for="option_3">24x20</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="frame_size" id="option_4">
+                                <label onclick="getFrameSize(180*1.321,180*1.421, 200)" for="option_4">28x24</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="frame_size" id="option_5">
+                                <label onclick="getFrameSize(180*1.421, 180*1.521, 250)" for="option_5">32x28</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="frame_size" id="option_6">
+                                <label onclick="getFrameSize(180*1.521,180*1.621,300)" for="option_6">36x32</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="frame_size" id="option_7">
+                                <label onclick="getFrameSize(180*1.621,180*1.721,350)" for="option_7">40x36</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="frame_size" id="option_8" checked>
+                                <label onclick="getFrameSize(180*1.721,180*1.821,400)" for="option_8">44x40</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/js/frames.js"></script>
+</body>
+
+</html>

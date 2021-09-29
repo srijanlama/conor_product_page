@@ -1,0 +1,44 @@
+.navi-item a.navi-link.active  {
+    /* padding: 0 !important; */
+    background-color: #F3F6F9;
+}
+/* SRIJAN RESPONSIVE WORK COMPLETE */
+@media only screen and (max-width: 1300px) {
+    .flex-shrink-left {
+        /* flex : 1 !important;  */
+        /* padding: 0 3rem ;         */
+    }
+    .flex-shrink-left .potrait {
+        width: 400px;
+    }
+    .flex-shrink-left .potrait img {
+        width: 100%;
+    }
+}
+ @media only screen and (max-width: 1200px) {
+    .flex-shrink-left {
+        flex : 1 !important; 
+        padding: 5rem;
+    }
+    .flex-shrink-right {
+        flex: 2 !important;
+    }
+    .potrait {
+        width: 320px !important;
+    }
+    .potrait img {
+        width: 100%;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    .wrapper {
+        display: block !important;
+    }
+    
+    .flex-even {
+        /* display: block !important; */
+    }
+    .potrait-holder {        
+        width: auto !important;
+    }
+  }
