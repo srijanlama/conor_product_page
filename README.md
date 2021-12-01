@@ -24,5 +24,9 @@ add APP_SECRET='Stripe_Secret_key'
 ```
   composer install
  ```
+Start Development Server
+ ```
+ php -S localhost:8000
+ ```
 
   
