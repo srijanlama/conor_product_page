@@ -1,4 +1,4 @@
-# Interactive Product Page 
+## Interactive Product Page 
 
 https://www.behance.net/gallery/128341195/Interactive-web-frame-design
 
@@ -12,13 +12,17 @@ https://user-images.githubusercontent.com/42295335/135261026-e45722aa-c51a-4356-
 
 Developed by- <b>Srizn<b/> <br/>
 <i>www.freelancer.com/u/srizn<i/> <br/>
-<i>www.behance.net/srijanlama<i/>
+<i>www.behance.net/srijanlama<i/> <br/>
 
 ### Stripe Checkout 
-  
+ 
 edit .env-example to .env
   
 add APP_SECRET='Stripe_Secret_key'
+  
+ Project Installation
+```
+  composer install
+ ```
 
-composer install 
   
