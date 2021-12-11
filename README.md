@@ -4,10 +4,7 @@ https://www.behance.net/gallery/128341195/Interactive-web-frame-design
 
 Sample GIF <br/>
 
-
-https://user-images.githubusercontent.com/42295335/135261026-e45722aa-c51a-4356-af66-493a281f7452.mp4
-
-
+![conor gif](https://user-images.githubusercontent.com/42295335/145689484-7ee96a36-753d-4973-b95d-e75bcfa582f0.gif)
 
 
 Developed by- <b>Srizn<b/> <br/>
